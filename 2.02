@@ -1,0 +1,11 @@
+import numpy as np
+datos= np.loadtxt("https://raw.githubusercontent.com/asegura4488/Database/main/MetodosComputacionalesReforma/EstrellaEspectro.txt", dtype= float)
+
+maximos= []
+for i in range(1,197):
+    punto= datos[i]
+    altura= datos[i][1]
+    if altura> datos[i-1][1] and altura> datos[i+1][1]:
+        maximos.append(punto)
+        
+print(maximos)
