@@ -9,7 +9,7 @@ X,Y= np.meshgrid(x,y)
 centro= np.array([0.0,0.0])
 
 def PotFlujo(x, y,R,V):
-    return V*(1- ((R**2)/(x**2)+(y**2)))
+    return V*x*(1+ ((R**2)/(x**2)+(y**2)))
 
 
 def VParx(pot, x, y, R, V, h):
